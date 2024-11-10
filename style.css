@@ -1,0 +1,458 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Inter', sans-serif;
+}
+/* This is a nav bar style */
+
+.navbar {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  /* img part */
+  .navimg {
+    & img {
+      width: 200px;
+      margin-left: 20px;
+    }
+  }
+  /* mid part */
+  .navmid {
+    display: flex;
+    gap: 10px;
+    font-weight: 500;
+    font-size: 22px;
+    align-items: center;
+  }
+  /* login form */
+  .login {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-right: 10px;
+    .btn1 {
+      border: none;
+      background-color: #f1f1f1;
+      padding: 10px 15px;
+      border-radius: 20px;
+      font-weight: 500;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .btn1:hover {
+      background-color: blue;
+      color: white;
+    }
+    .btn2 {
+      border: none;
+      background-color: #000000;
+      padding: 10px 15px;
+      border-radius: 20px;
+      color: white;
+      font-weight: 500;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .btn2:hover {
+      background-color: white;
+      border: 1px solid black;
+      color: #000000;
+      font-weight: 500;
+    }
+    & img {
+      width: 27px;
+      height: 27px;
+      cursor: pointer;
+    }
+  }
+}
+/* nav responsive */
+@media  (max-device-width: 767px){
+  .navbar{
+    .navimg{
+      & img{
+        width: 100px;
+        margin-left: 10px;
+        padding-top: 9px;
+      }
+    }
+    .navmid{
+      display: none;
+    }
+    .login{
+      .btn1{
+        padding: 5px 10px;
+      }
+      .btn2{
+        padding: 5px 10px;
+        font-weight: 300;
+      }
+      & img{
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+  
+}
+
+/* This is a nav bar style end */
+/* header section start */
+
+.header {
+  position: relative;
+  .img {
+    & img {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+      margin-top: 10px;
+    }
+  }
+  .overlap {
+    position: absolute;
+    width: 70%;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 200px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+
+    & h1 {
+      text-align: center;
+      margin-top: 30px;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+    .currency {
+      text-align: center;
+      & select {
+        width: 120px;
+        border: none;
+        background-color: #ececec;
+        padding: 10px;
+        border-radius: 5px;
+      }
+    }
+    .input {
+      text-align: center;
+      margin-top: 10px;
+      margin-bottom: 30px;
+      & input {
+        width: 380px;
+        padding: 10px;
+        border: none;
+        background-color: #ececec;
+      }
+      & button {
+        width: 110px;
+        background-color: #00ebc7;
+        border-radius: 30px;
+        border: none;
+        padding: 10px;
+        transition: 0.5s;
+      }
+      & button:hover {
+        color: white;
+        background-color: black;
+      }
+    }
+  }
+  .button {
+    position: absolute;
+    bottom: 70px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border: 1px solid white;
+    padding: 10px;
+    background-color: inherit;
+    color: white;
+    font-weight: 500;
+    border-radius: 30px;
+    width: 100px;
+    transition: 0.5s;
+  }
+  .button:hover {
+    background-color: blue;
+    border: none;
+    font-weight: 600;
+  }
+}
+
+/* header section end */
+/* header recponsive */
+@media  (max-device-width: 767px){
+  .header{
+    .overlap{
+      width: 90%;
+      height: 230px;
+      .currency{
+        & select{
+          width: 40%;
+          margin-bottom: 5px;
+
+        }
+      }
+      .input{
+        margin-top: -0.5px;
+        & input{
+          width: 50%;
+       
+        }
+      }
+    }
+
+  }
+}
+
+/* icon section */
+.icon {
+  width: 100%;
+  background-color: #fde24f;
+  margin-top: 0;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  margin-top: -4px;
+  & h3 {
+    text-align: center;
+    padding: 30px;
+    font-size: 16px;
+  }
+  & img {
+    width: 80%;
+  }
+}
+/* icon end */
+/* icon recponsive */
+@media  (max-device-width: 767px){
+  .icon{
+    height: 180px;
+  }
+}
+/* about section start */
+
+.about {
+  margin-top: 50px;
+  background-color: #F8F8F8;
+  & h4 {
+    margin-left: 50px;
+    margin-top: 15px;
+    font-size: 25px;
+  }
+  .about_main {
+    display: flex;
+    margin-bottom: 50px;
+    justify-content: space-evenly;
+    .one {
+      display: flex;
+      margin-top: 25px;
+      justify-content: space-between;
+      flex-direction: column;
+      align-items: center;
+
+      & img {
+        width: 40px;
+        height: 40px;
+      }
+      & h3 {
+        font-weight: 600;
+        margin-top: 10px;
+      }
+      & p {
+        width: 240px;
+        text-align: center;
+        margin-top: 15px;
+        font-weight: 300;
+      }
+      & a {
+        color: black;
+        font-weight: 500;
+        margin-top: 30px;
+      }
+    }
+  }
+  .about_button{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 30px;
+    padding: 5px 20px;
+    background-color: inherit;
+    font-weight: 600;
+    border-radius: 20px;
+  }
+  .about_button:hover{
+    background-color: #000000;
+    color: white;
+  }
+}
+
+/* about section end */
+/* about recponsive */
+@media  (max-device-width: 767px){
+  .about{
+    & h4{
+      margin-left: 5px;
+      font-size: 20px;
+      font-weight: 400;
+    }
+    .about_main{
+      display: grid;
+      margin-bottom: 40px;
+    }
+  }
+}
+/* buy sell section start */
+
+.buysell{
+  background-color: #F8F8F8;
+  display: flex;
+  justify-content: space-evenly;
+  margin: auto;
+  margin-bottom: 30px;
+  .buy{
+    & h1{
+      font-weight: 600;
+      margin-top: 20px;
+      text-align: left;
+      display: flex;
+      margin-bottom: 30px;
+    }
+    .first{
+      display: flex;
+      border: 1px solid black;
+      gap: 30px;
+      align-items: center;
+      background-color: white;
+      border-radius: 10px;
+      padding: 10px;
+      padding-right: 25px;
+      margin-bottom: 20px;
+      & img{
+        width: 40px;
+      }
+      & p{
+        font-weight: 500;
+      }
+      
+    }
+    .btn{
+        padding: 10px 20px;
+        margin: auto;
+        justify-content: center;
+        display: flex;
+        border: none;
+        background-color: #000000;
+        color: white;
+        border-radius: 20px;
+      }
+  }
+}
+
+/* buy sell section end */
+/* buy sell recponsive */
+@media  (max-device-width: 767px){
+  .buysell{
+    display: grid;
+    padding: 0px 5px;
+    & hr{
+      display: none;
+    }
+    
+  }
+}
+/* simple section start */
+
+.simple{
+  background-color: #CFBAFF;
+  padding: 80px 60px 40px;
+  & h1{
+    font-size: 40px;
+    text-align: center;
+    font-weight: 500;
+  }
+  .sbutton{
+    margin: auto;
+    display: flex;
+    margin-top: 50px;
+    background-color: #000000;
+    color: white;
+    font-weight: 600;
+    padding: 5px 20px;
+    border-radius: 20px;
+  }
+  .sbutton:hover{
+    background-color: inherit;
+    color: black;
+  }
+}
+
+/* simple section end */
+/* simple section recponsive */
+@media  (max-device-width: 767px){
+  .simple{
+    padding: 20px 30px;
+    & h1{
+      font-size: 30px;
+      margin-bottom: -20px;
+    }
+  }
+}
+/* footer section start */
+
+.footer{
+  background-color: #000000;
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 70px;
+  padding-bottom: 30px;
+  & h1{
+    margin-bottom: 30px;
+  }
+  & p{
+    font-weight: 500;
+    line-height: 30px;
+  }
+}
+/* footer section end */
+/* footer section recponsive */
+@media  (max-device-width: 767px){
+  .footer{
+    display: grid;
+    justify-content: start;
+    padding-left: 30px;
+  }
+}
+/* last footer section */
+footer{
+  padding: 30px;
+  background-color: #000000;
+  color: white;
+  & p{
+    font-size: 8px;
+  }
+}
+/* rooter recponsive */
+@media  (max-device-width: 767px){
+  footer{
+    & p{
+      font-size: 16px;
+    }
+    
+  }
+}
